@@ -21,7 +21,8 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "Jenky\\LaravelGenerators\\": "packages/jenky/laravel-generators/src/"
+            "Jenky\\LaravelGenerators\\": "packages/jenky/laravel-generators/src/",
+            "Jenky\\LaravelPushNotification\\": "packages/jenky/laravel-push-notification/src/"
         }
     },
     "autoload-dev": {
