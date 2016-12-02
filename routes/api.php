@@ -16,3 +16,16 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::api('v1', function ($router) {
+    $router->get('auth', function (\Tymon\JWTAuth\JWTAuth $auth) {
+        $user = \App\User::first();
+        $token = $auth->fromUser($user);
+
+        return compact('token');
+    });
+
+    $router->get('user', function (Request $request) {
+        return $request->user();
+    })->middleware('auth:api');
+});
