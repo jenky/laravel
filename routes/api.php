@@ -18,6 +18,13 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 Route::api('v1', function ($router) {
+    $router->get('/', function () {
+        return response()->internalError();
+    });
+
+    $router->get('transformer', 'TestController@transformer');
+    $router->get('validate', 'TestController@validation');
+
     $router->get('auth', function (\Tymon\JWTAuth\JWTAuth $auth) {
         $user = \App\User::first();
         $token = $auth->fromUser($user);
