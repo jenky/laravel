@@ -26,6 +26,7 @@
             "App\\": "app/",
             "Jenky\\LaravelGenerators\\": "packages/jenky/laravel-generators/src/",
             "Jenky\\LaravelAPI\\": "packages/jenky/laravel-api/src/",
+            "Jenky\\RESTfulEloquent\\": "packages/jenky/restful-eloquent/src/",
             "Jenky\\LaravelPushNotification\\": "packages/jenky/laravel-push-notification/src/"
         }
     },
