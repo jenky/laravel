@@ -24,6 +24,7 @@ Route::api('v1', function ($router) {
 
     $router->get('transformer', 'TestController@transformer');
     $router->get('validate', 'TestController@validation');
+    $router->get('users', 'TestController@users');
 
     $router->get('auth', function (\Tymon\JWTAuth\JWTAuth $auth) {
         $user = \App\User::first();

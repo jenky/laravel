@@ -29,4 +29,10 @@ class TestController extends Controller
     {
         throw new \App\Exceptions\TestException("Error Processing Request");
     }
+
+    public function users()
+    {
+        return \App\User::filterBy('id', 'first_name')
+            ->sortBy('first_name')->get();
+    }
 }
