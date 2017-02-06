@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Transformers\TestTransformer;
 use Illuminate\Http\Request;
+use Spatie\Fractalistic\ArraySerializer;
 
 class TestController extends Controller
 {
@@ -22,7 +23,7 @@ class TestController extends Controller
 
     public function transformer()
     {
-        return response()->transform(\App\User::paginate(), new TestTransformer);
+        return response()->fractal(\App\User::all(), new TestTransformer, new ArraySerializer);
     }
 
     public function exception()
