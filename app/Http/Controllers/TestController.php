@@ -8,6 +8,8 @@ use Spatie\Fractalistic\ArraySerializer;
 
 class TestController extends Controller
 {
+    use \Jenky\SmartRule\SmartRule;
+
     public function validation(Request $request)
     {
         // dd($request);
@@ -35,5 +37,10 @@ class TestController extends Controller
     {
         return \App\User::filterBy('id', 'first_name')
             ->sortBy('first_name')->get();
+    }
+
+    public function collection()
+    {
+        return $this->rules(\Jenky\SmartRule\Rule::class);
     }
 }

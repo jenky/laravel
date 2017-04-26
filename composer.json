@@ -26,7 +26,8 @@
             "Jenky\\LaravelGenerators\\": "packages/jenky/laravel-generators/src/",
             "Jenky\\LaravelAPI\\": "packages/jenky/laravel-api/src/",
             "Jenky\\RESTfulEloquent\\": "packages/jenky/restful-eloquent/src/",
-            "Jenky\\LaravelPushNotification\\": "packages/jenky/laravel-push-notification/src/"
+            "Jenky\\LaravelPushNotification\\": "packages/jenky/laravel-push-notification/src/",
+            "Jenky\\SmartRule\\": "packages/jenky/smart-rule/src/"
         }
     },
     "autoload-dev": {

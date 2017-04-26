@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('test')
+    ->group(function () {
+        Route::get('rules', 'TestController@collection');
+    });
