@@ -41,6 +41,8 @@ class TestController extends Controller
 
     public function collection()
     {
-        return $this->rules(\Jenky\SmartRule\Rule::class);
+        return $this->rules(new \App\Rules\TestRule, function ($rules) {
+            return $rules->put('test', 'integer');
+        });
     }
 }
