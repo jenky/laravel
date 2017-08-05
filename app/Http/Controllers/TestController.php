@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TestRequest;
 use App\Transformers\TestTransformer;
+use App\Validators\TestPreset;
 use Illuminate\Http\Request;
+use JenKy\ValidationPresets\ValidatesWithPresets;
 use Spatie\Fractalistic\ArraySerializer;
 
 class TestController extends Controller
 {
-    use \Jenky\SmartRule\SmartRule;
+    use ValidatesWithPresets;
 
     public function validation(Request $request)
     {
@@ -39,10 +42,12 @@ class TestController extends Controller
             ->sortBy('first_name')->get();
     }
 
-    public function collection()
+    public function request(TestRequest $request)
     {
-        return $this->rules(new \App\Rules\TestRule, function ($rules) {
-            return $rules->put('test', 'integer');
-        });
+    }
+
+    public function controller()
+    {
+        $this->preset(new TestPreset);
     }
 }

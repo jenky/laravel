@@ -3,9 +3,12 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use JenKy\ValidationPresets\ValidatesWithPresets;
 
 class TestRequest extends FormRequest
 {
+    use ValidatesWithPresets;
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -13,7 +16,7 @@ class TestRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,7 +26,7 @@ class TestRequest extends FormRequest
      */
     public function rules()
     {
-        return (new \Jenky\SmartRule\Rule)->run();
+        return $this->preset(new \App\Validators\TestPreset);
         return [
             //
         ];

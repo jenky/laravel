@@ -17,5 +17,6 @@ Route::get('/', function () {
 
 Route::prefix('test')
     ->group(function () {
-        Route::get('rules', 'TestController@collection');
+        Route::get('request', 'TestController@request');
+        Route::get('controller', 'TestController@controller');
     });
