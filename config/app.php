@@ -167,7 +167,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravel\Tinker\TinkerServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         // Jenky\RESTfulEloquent\EloquentServiceProvider::class,
