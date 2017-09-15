@@ -9,6 +9,9 @@
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0"
+        "barryvdh/laravel-cors": "^0.9.2",
+        "spatie/laravel-fractal": "^5.0",
+        "tymon/jwt-auth": "^1.0@dev"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
@@ -22,7 +25,14 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Jenky\\LaravelGenerators\\": "packages/jenky/laravel-generators/src/",
+            "Jenky\\LaravelAPI\\": "packages/jenky/laravel-api/src/",
+            "Jenky\\RESTfulEloquent\\": "packages/jenky/restful-eloquent/src/",
+            "Jenky\\LaravelPushNotification\\": "packages/jenky/laravel-push-notification/src/",
+            "Jenky\\SmartRule\\": "packages/jenky/smart-rule/src/",
+            "Jenky\\LaravelPlupload\\": "packages/jenky/laravel-plupload/src/",
+            "JenKy\\ValidationPresets\\": "packages/jenky/laravel-validation-presets/src/"
         }
     },
     "autoload-dev": {

@@ -167,6 +167,10 @@ return [
         /*
          * Package Service Providers...
          */
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
+        // Jenky\RESTfulEloquent\EloquentServiceProvider::class,
+        Jenky\LaravelAPI\ApiServiceProvider::class,
 
         /*
          * Application Service Providers...
