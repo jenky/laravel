@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\TestRequest;
 use App\Transformers\TestTransformer;
+use App\User;
 use App\Validators\TestPreset;
 use Illuminate\Http\Request;
 use JenKy\ValidationPresets\ValidatesWithPresets;
@@ -23,12 +24,12 @@ class TestController extends Controller
 
     public function model()
     {
-        return \App\User::findOrFail(100);
+        return User::findOrFail(100);
     }
 
     public function transformer()
     {
-        return response()->fractal(\App\User::all(), new TestTransformer, new ArraySerializer);
+        return response()->fractal(User::all(), new TestTransformer, new ArraySerializer);
     }
 
     public function exception()
@@ -38,8 +39,12 @@ class TestController extends Controller
 
     public function users()
     {
-        return \App\User::filterBy('id', 'first_name')
-            ->sortBy('first_name')->get();
+        \Illuminate\Http\Resources\Json\Resource::withoutWrapping();
+        // return \App\User::filterBy('id', 'first_name')
+        //     ->sortBy('first_name')->get();
+        return new \App\Http\Resources\User(User::first());
+        return \App\Http\Resources\User::collection(User::all());
+        // return new \App\Http\Resources\UserCollection(User::paginate());
     }
 
     public function request(TestRequest $request)
