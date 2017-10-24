@@ -29,7 +29,7 @@ class TestController extends Controller
 
     public function transformer()
     {
-        return response()->fractal(User::all(), new TestTransformer, new ArraySerializer);
+        return response()->fractal(User::paginate(), new TestTransformer);
     }
 
     public function exception()

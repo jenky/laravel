@@ -4,9 +4,12 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Jenky\LaravelAPI\Exception\ExceptionResponse;
 
 class Handler extends ExceptionHandler
 {
+    use ExceptionResponse;
+
     /**
      * A list of the exception types that are not reported.
      *
