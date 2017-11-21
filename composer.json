@@ -9,15 +9,16 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "barryvdh/laravel-debugbar": "^3.1",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0",
-        "barryvdh/laravel-cors": "^0.9.3",
-        "spatie/laravel-fractal": "^5.0",
-        "tymon/jwt-auth": "^1.0@dev"
+        "laravel/tinker": "~1.0"
     },
     "require-dev": {
         "davestewart/sketchpad": "^1.2",
+        "barryvdh/laravel-cors": "^0.9.3",
+        "spatie/laravel-fractal": "^5.0",
+        "tymon/jwt-auth": "^1.0@dev",
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
