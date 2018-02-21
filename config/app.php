@@ -150,6 +150,10 @@ return [
         /*
          * Package Service Providers...
          */
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        // Jenky\RESTfulEloquent\EloquentServiceProvider::class,
+        Jenky\LaravelAPI\ApiServiceProvider::class,
+        davestewart\sketchpad\SketchpadServiceProvider::class,
 
         /*
          * Application Service Providers...
