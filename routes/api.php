@@ -15,4 +15,25 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+})->middleware('auth:api');
+
+Route::api('v1', function ($router) {
+    $router->get('/', function () {
+        return response()->internalError();
+    });
+
+    $router->get('transformer', 'TestController@transformer');
+    $router->get('validation', 'TestController@validation');
+    $router->get('users', 'TestController@users');
+
+    $router->get('auth', function (\Tymon\JWTAuth\JWTAuth $auth) {
+        $user = \App\User::first();
+        $token = $auth->fromUser($user);
+
+        return compact('token');
+    });
+
+    $router->get('user', function (Request $request) {
+        return $request->user();
+    })->middleware('auth:api');
 });

@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('test')
+    ->group(function () {
+        Route::get('users', 'TestController@users');
+        Route::get('transformer', 'TestController@transformer');
+        Route::get('request', 'TestController@request');
+        Route::get('controller', 'TestController@controller');
+    });
