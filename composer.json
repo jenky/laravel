@@ -23,8 +23,12 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
-        }
+            "App\\": "app/",
+            "Jenky\\LaravelPlupload\\": "packages/laravel-plupload/"
+        },
+        "files": [
+            "packages/laravel-plupload/src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

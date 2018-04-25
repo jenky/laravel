@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::view('upload', 'upload');
+
+Route::post('upload', function () {
+    return plupload()->file('file', function ($file) {
+        Storage::putFile('upload', $file);
+    });
+})->name('upload');
