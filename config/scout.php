@@ -89,11 +89,7 @@ return [
     ],
 
     'elasticsearch' => [
-        'client' => [
-            'hosts' => [
-                env('ELASTICSEARCH_HOST', 'localhost:9200'),
-            ],
-        ],
+        'connection' => config('elasticsearch.defaultConnection', 'default'),
     ],
 
 ];

@@ -5,10 +5,12 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Scout\Searchable;
+use Jenky\ScoutElasticsearch\ScoutElasticsearch;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, Searchable, ScoutElasticsearch;
 
     /**
      * The attributes that are mass assignable.
@@ -27,4 +29,27 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getIndexProperties(): array
+    {
+        return [
+            $this->getKeyName() => [
+                'type' => 'integer',
+            ],
+            'name' => [
+                'type' => 'text',
+            ],
+            'email' => [
+                'type' => 'text',
+            ],
+            'created_at' => [
+                'type' => 'date',
+                'format' => 'yyyy-MM-dd HH:mm:ss',
+            ],
+            'updated_at' => [
+                'type' => 'date',
+                'format' => 'yyyy-MM-dd HH:mm:ss',
+            ],
+        ];
+    }
 }
