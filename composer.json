@@ -28,7 +28,10 @@
         "psr-4": {
             "App\\": "app/",
             "Jenky\\ScoutElasticsearch\\": "packages/scout-elasticsearch/src/"
-        }
+        },
+        "files": [
+            "packages/scout-elasticsearch/src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
