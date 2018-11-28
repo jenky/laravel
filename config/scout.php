@@ -90,6 +90,26 @@ return [
 
     'elasticsearch' => [
         'connection' => config('elasticsearch.defaultConnection', 'default'),
+        // 'filter' => [
+        //     '+',
+        //     '-',
+        //     '&',
+        //     '|',
+        //     '!',
+        //     '(',
+        //     ')',
+        //     '{',
+        //     '}',
+        //     '[',
+        //     ']',
+        //     '^',
+        //     '\\',
+        //     '"',
+        //     '~',
+        //     '*',
+        //     '?',
+        //     ':'
+        // ],
     ],
 
 ];

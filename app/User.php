@@ -32,17 +32,27 @@ class User extends Authenticatable
 
     public function getIndexProperties(): array
     {
-        return array_merge([
+        return $this->generateProperties([
             'name' => [
                 'type' => 'text',
+                'fields' => [
+                    'sort' => [
+                        'type' => 'keyword',
+                    ],
+                ],
             ],
             'email' => [
                 'type' => 'text',
+                'fields' => [
+                    'sort' => [
+                        'type' => 'keyword',
+                    ],
+                ],
             ],
             'email_verified_at' => [
                 'type' => 'date',
                 'format' => 'yyyy-MM-dd HH:mm:ss',
             ],
-        ], $this->dynamicProperties());
+        ]);
     }
 }

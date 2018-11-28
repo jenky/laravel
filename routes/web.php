@@ -16,5 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('search', function () {
-    return \App\User::search(request('q'))->get();
+    return \App\User::search(sprintf('*%s*', request('q')))
+        // ->where('id', [1, 2, 3])
+        ->orderBy('name.sort', 'asc')
+        ->raw();
 });
