@@ -24,6 +24,9 @@ return [
         'database' => [
             'connection' => env('DB_CONNECTION', 'mysql'),
         ],
+        'elasticsearch' => [
+            'connection' => env('ELASTICSEARCH_CONNECTION', 'default'),
+        ],
     ],
 
     /*

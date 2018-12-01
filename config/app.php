@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Jenky\TelescopeElasticsearch\TelescopeElasticsearchServiceProvider::class,
 
         /*
          * Application Service Providers...
