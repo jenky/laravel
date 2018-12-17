@@ -1,5 +1,8 @@
 <?php
 
+use App\Mail\TestEmail;
+use Illuminate\Contracts\Mail\Mailer;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +16,23 @@
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('log', function () {
+    $message = request('log', 'This is a log message');
+    logger($message);
+
+    return $message;
+});
+
+Route::get('exception', function () {
+    throw new \RuntimeException("Error Processing Request");
+});
+
+Route::get('mail', function (Mailer $mailer) {
+    $mail = new TestEmail;
+    $mailer->to('hello@example.com')
+        ->send($mail);
+
+    return $mail->render();
 });
