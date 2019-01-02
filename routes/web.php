@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('test', function () {
-    dd(elasticsearch());
+    // return \App\UserIndex::get(request('limit'));
+    return \App\UserIndex::find(14);
 });
