@@ -18,6 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('test', function () {
-    // return \App\UserIndex::get(request('limit'));
-    return \App\UserIndex::find(14);
+    // return \App\UserIndex::find([1, 2, 3, 4]);
+    return \App\UserIndex::match('name', 'Chasity')
+        ->highlight(['name' => []])
+        // ->toDSL();
+        ->get(request('limit'));
 });
