@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function () {
+Route::get('search', function () {
     // return \App\UserIndex::find([1, 2, 3, 4]);
     return \App\UserIndex::match('name', 'Chasity')
         ->highlight(['name' => []])
