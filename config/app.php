@@ -1,7 +1,5 @@
 <?php
 
-use Jenky\ScoutElasticsearch\ScoutElasticsearchServiceProvider;
-
 return [
 
     /*

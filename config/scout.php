@@ -89,7 +89,7 @@ return [
     ],
 
     'elasticsearch' => [
-        'connection' => config('elasticsearch.defaultConnection', 'default'),
+        'connection' => config('elasticsearch.default', 'default'),
         // 'filter' => [
         //     '+',
         //     '-',

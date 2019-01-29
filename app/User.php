@@ -2,11 +2,10 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Scout\Searchable;
+use Illuminate\Notifications\Notifiable;
 use Jenky\ScoutElasticsearch\ScoutElasticsearch;
+use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
@@ -30,29 +29,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function getIndexProperties(): array
+    public function elasticsearchIndex()
     {
-        return $this->generateProperties([
-            'name' => [
-                'type' => 'text',
-                'fields' => [
-                    'sort' => [
-                        'type' => 'keyword',
-                    ],
-                ],
-            ],
-            'email' => [
-                'type' => 'text',
-                'fields' => [
-                    'sort' => [
-                        'type' => 'keyword',
-                    ],
-                ],
-            ],
-            'email_verified_at' => [
-                'type' => 'date',
-                'format' => 'yyyy-MM-dd HH:mm:ss',
-            ],
-        ]);
+        return new UserIndex($this);
     }
 }
