@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Jenky\ScoutElasticsearch\Elasticsearch\Index;
 use Jenky\ScoutElasticsearch\ScoutElasticsearch;
 use Laravel\Scout\Searchable;
 
@@ -29,7 +30,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function elasticsearchIndex()
+    public function elasticsearchIndex(): Index
     {
         return new UserIndex($this);
     }
