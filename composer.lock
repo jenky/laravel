@@ -801,12 +801,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jenky/laravel-elasticsearch.git",
-                "reference": "d44352a328aa5d42bc8f5e05be7995a340a0b055"
+                "reference": "793b416f39997f834c4331991fa420f3edf0f74c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jenky/laravel-elasticsearch/zipball/d44352a328aa5d42bc8f5e05be7995a340a0b055",
-                "reference": "d44352a328aa5d42bc8f5e05be7995a340a0b055",
+                "url": "https://api.github.com/repos/jenky/laravel-elasticsearch/zipball/793b416f39997f834c4331991fa420f3edf0f74c",
+                "reference": "793b416f39997f834c4331991fa420f3edf0f74c",
                 "shasum": ""
             },
             "require": {
@@ -852,7 +852,7 @@
                 "jenky",
                 "laravel-elasticsearch"
             ],
-            "time": "2019-01-30T08:16:03+00:00"
+            "time": "2019-01-30T16:13:31+00:00"
         },
         {
             "name": "laravel/framework",
