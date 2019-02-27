@@ -24,3 +24,11 @@ Route::get('search', function () {
         // ->toDSL();
         ->get(request('limit'));
 });
+
+Route::get('test', function () {
+    dd( \Jenky\LaravelElasticsearch\Facades\ES::index('.users')
+        ->match('name', 'Chasity')
+        ->get()
+        // ->exists('name')
+    );
+});
