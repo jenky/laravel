@@ -19,10 +19,15 @@ Route::get('/', function () {
 
 Route::get('search', function () {
     // return \App\UserIndex::find([1, 2, 3, 4]);
-    return \App\UserIndex::match('name', 'Chasity')
+    return \App\UserIndex::queryString('*')
         ->highlight(['name' => []])
+        ->sum('id')
+        ->average('id')
+        ->min('id')
+        ->max('id')
         // ->toDSL();
-        ->get(request('limit'));
+        ->get(request('limit'))
+        ->raw();
 });
 
 Route::get('test', function () {
