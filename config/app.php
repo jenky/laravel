@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Jenky\LaravelAPI\ApiServiceProvider::class,
 
         /*
          * Application Service Providers...
