@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Jenky\LaravelElasticsearch\Storage\Index;
+use Jenky\Elastify\Storage\Index;
 
 class UserIndex extends Index
 {

@@ -31,7 +31,7 @@ Route::get('search', function () {
 });
 
 Route::get('test', function () {
-    dd( \Jenky\LaravelElasticsearch\Facades\ES::index('.users')
+    dd( \Jenky\Elastify\Facades\ES::index('.users')
         ->match('name', 'Chasity')
         ->get()
         // ->exists('name')

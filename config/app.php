@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Jenky\LaravelElasticsearch\ElasticsearchServiceProvider::class,
+        Jenky\Elastify\ElastifyServiceProvider::class,
 
         /*
          * Application Service Providers...

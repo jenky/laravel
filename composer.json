@@ -35,14 +35,14 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Jenky\\LaravelElasticsearch\\": "packages/laravel-elasticsearch/src/"
+            "Jenky\\Elastify\\": "packages/elastify/src/"
         },
         "classmap": [
             "database/seeds",
             "database/factories"
         ],
         "files": [
-            "packages/laravel-elasticsearch/src/helpers.php"
+            "packages/elastify/src/helpers.php"
         ]
     },
     "autoload-dev": {
