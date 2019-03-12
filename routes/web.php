@@ -31,14 +31,18 @@ Route::get('search', function () {
         // ->toDSL()
         // ->take(30)->get()
         ->paginate(request('limit', 20))
-        // ->raw()
-        ->toArray()
+        ->raw()
+        // ->toArray()
     );
 });
 
-Route::get('test', function () {
+Route::get('facade', function () {
     dd( \Jenky\Elastify\Facades\ES::index('.users')
-        ->match('name', 'Chasity')
+        ->match('name', 'Mr')
+        ->sum('id')
+        ->average('id')
+        ->min('id')
+        ->max('id')
         ->get()
         // ->exists('name')
     );
