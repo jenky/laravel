@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Jenky\Elastify\Storage\Index;
+use Jenky\Elastify\Index;
 
 class UserIndex extends Index
 {
