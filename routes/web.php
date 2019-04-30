@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('test', function () {
+    dd(resolve('guzzilla')->get('https://example.com'));
+});
