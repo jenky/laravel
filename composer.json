@@ -34,7 +34,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Jenky\\Guzzilar\\": "packages/guzzila/"
+            "Jenky\\Guzzilla\\": "packages/guzzilla/src/"
         },
         "classmap": [
             "database/seeds",
