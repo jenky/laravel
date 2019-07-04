@@ -18,15 +18,14 @@ Route::get('/', function () {
 });
 
 Route::get('search', function () {
-    // return \App\UserIndex::find([1, 2, 3, 4]);
-    dd( \App\UserIndex::queryString('*')
+    dd( \App\UserIndex::queryString(request('q', '*'))
         ->highlight(['name' => []])
         ->sum('id')
         ->average('id')
         ->min('id')
         ->max('id')
         ->suggest(function ($q) {
-            $q->term('name_sugges', 'name');
+            $q->term('name_suggest', 'name');
         })
         // ->toDSL()
         // ->take(30)->get()
