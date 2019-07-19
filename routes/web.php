@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('search', function () {
-    dd( \App\UserIndex::queryString(request('q', '*'))
+    dd(\App\UserIndex::queryString(request('q', '*'))
         ->highlight(['name' => []])
         ->sum('id')
         ->average('id')
@@ -37,7 +37,7 @@ Route::get('search', function () {
 
 Route::get('facade', function () {
     dd( \Jenky\Elastify\Facades\ES::index('.users')
-        ->match('name', 'Mr')
+        ->queryString(request('q', '*'))
         ->sum('id')
         ->average('id')
         ->min('id')
@@ -45,4 +45,18 @@ Route::get('facade', function () {
         ->get()
         // ->exists('name')
     );
+});
+
+Route::get('global', function () {
+    dd(\Jenky\Elastify\Search::with('.users', '.telescope')
+        ->queryString(request('q', '*'))
+        ->get()
+    );
+});
+
+Route::get('test', function () {
+    return App\UserIndex::make()->getConnection()
+        ->indices()->getAliases([
+            'index' => 'users-2019.01.29',
+        ]);
 });
