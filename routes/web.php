@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('test', function () {
-    dd(resolve('guzzilla')->get('https://example.com'));
+    // dd(guzzle()->get('https://example.com'));
+    return guzzle()->get('https://jsonplaceholder.typicode.com/users/1');
 });
