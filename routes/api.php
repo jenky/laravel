@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::api('v1')
+Route::api('1.0', '1.1')
     ->group(function () {
         Route::get('/', function () {
             return [
