@@ -27,7 +27,8 @@ Route::api('1.0', '1.2')
         Route::prefix('v1')->group(function () {
             Route::get('/', function () {
                 return [
-                    'version' => request()->version('^1.0 || ^2.0'),
+                    'route' => request()->route()->version(),
+                    'request' => request()->version(),
                 ];
             });
         });
