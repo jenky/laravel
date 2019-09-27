@@ -30,6 +30,6 @@ Route::api('1.0', '1.2')
                     'route' => request()->route()->version(),
                     'request' => request()->version(),
                 ];
-            });
+            })->api('2.0');
         });
     });
