@@ -17,19 +17,28 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::api('1.0', '1.2')
+Route::api('v1')
     ->group(function () {
         Route::get('/', function () {
             return [
                 'message' => 'Welcome to Laravel',
+                'version' => [
+                    'set' => 'v1',
+                    'route' => request()->route()->version(),
+                ],
             ];
         });
-        Route::prefix('v1')->group(function () {
-            Route::get('/', function () {
-                return [
+    });
+
+Route::api('v2')
+    ->group(function () {
+        Route::get('/', function () {
+            return [
+                'message' => 'Welcome to Laravel',
+                'version' => [
+                    'set' => 'v2',
                     'route' => request()->route()->version(),
-                    'request' => request()->version(),
-                ];
-            })->api('2.0');
+                ],
+            ];
         });
     });
