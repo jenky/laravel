@@ -4,70 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af59964849f6e5f374cf128f8f27a2bd",
+    "content-hash": "fa503b104f700e4337a4bf209a56bc8a",
     "packages": [
-        {
-            "name": "composer/semver",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/semver.git",
-                "reference": "46d9139568ccb8d9e7cdd4539cab7347568a5e2e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/46d9139568ccb8d9e7cdd4539cab7347568a5e2e",
-                "reference": "46d9139568ccb8d9e7cdd4539cab7347568a5e2e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.2 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.5 || ^5.0.5",
-                "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Semver\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nils Adermann",
-                    "email": "naderman@naderman.de",
-                    "homepage": "http://www.naderman.de"
-                },
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                },
-                {
-                    "name": "Rob Bast",
-                    "email": "rob.bast@gmail.com",
-                    "homepage": "http://robbast.nl"
-                }
-            ],
-            "description": "Semver library that offers utilities, version constraint parsing and validation.",
-            "keywords": [
-                "semantic",
-                "semver",
-                "validation",
-                "versioning"
-            ],
-            "time": "2019-03-19T17:25:45+00:00"
-        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -532,16 +470,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v6.2.0",
+            "version": "v6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "cacce5a77fa94793cf25345d67387632134d75dd"
+                "reference": "80914c430fb5e49f492812d704ba6aeec03d80a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/cacce5a77fa94793cf25345d67387632134d75dd",
-                "reference": "cacce5a77fa94793cf25345d67387632134d75dd",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/80914c430fb5e49f492812d704ba6aeec03d80a2",
+                "reference": "80914c430fb5e49f492812d704ba6aeec03d80a2",
                 "shasum": ""
             },
             "require": {
@@ -674,7 +612,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-10-08T12:50:06+00:00"
+            "time": "2019-10-15T13:38:24+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -906,16 +844,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.25.1",
+            "version": "2.25.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "d59c6cea9c4a3547bb6c0dfec451319abdaa4fb1"
+                "reference": "443fe5f1498147e0fbc792142b5dc43e2e8a533f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d59c6cea9c4a3547bb6c0dfec451319abdaa4fb1",
-                "reference": "d59c6cea9c4a3547bb6c0dfec451319abdaa4fb1",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/443fe5f1498147e0fbc792142b5dc43e2e8a533f",
+                "reference": "443fe5f1498147e0fbc792142b5dc43e2e8a533f",
                 "shasum": ""
             },
             "require": {
@@ -969,7 +907,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-10-05T15:52:23+00:00"
+            "time": "2019-10-14T14:18:59+00:00"
         },
         {
             "name": "nikic/php-parser",
