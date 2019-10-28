@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Jenky\Guzzilla\GuzzillaServiceProvider::class,
+        Jenky\Hermes\HermesServiceProvider::class,
 
         /*
          * Application Service Providers...

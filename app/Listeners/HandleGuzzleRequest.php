@@ -4,7 +4,7 @@ namespace App\Listeners;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
-use Jenky\Guzzilla\Events\RequestHandled;
+use Jenky\Hermes\Events\RequestHandled;
 
 class HandleGuzzleRequest
 {
@@ -21,7 +21,7 @@ class HandleGuzzleRequest
     /**
      * Handle the event.
      *
-     * @param  \Jenky\Guzzilla\Events\RequestHandled  $event
+     * @param  \Jenky\Hermes\Events\RequestHandled  $event
      * @return void
      */
     public function handle(RequestHandled $event)
