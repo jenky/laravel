@@ -34,14 +34,14 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Jenky\\Guzzilla\\": "packages/guzzilla/src/"
+            "Jenky\\Hermes\\": "packages/hermes/src/"
         },
         "classmap": [
             "database/seeds",
             "database/factories"
         ],
         "files": [
-            "packages/guzzilla/src/helpers.php"
+            "packages/hermes/src/helpers.php"
         ]
     },
     "autoload-dev": {
