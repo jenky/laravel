@@ -27,8 +27,8 @@ class HandleGuzzleRequest
     public function handle(RequestHandled $event)
     {
         logger('Guzzle request and response', [
-            'request' => $event->request,
-            'response' => $event->response,
+            'request' => (string) $event->request->getBody(),
+            'response' => (string) $event->response->getBody(),
         ]);
     }
 }
