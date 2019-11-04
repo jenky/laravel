@@ -28,7 +28,7 @@ class HandleGuzzleRequest
     {
         logger('Guzzle request and response', [
             'request' => (string) $event->request->getBody(),
-            'response' => (string) $event->response->getBody(),
+            'response' => $event->response ? (string) $event->response->getBody() : null,
         ]);
     }
 }
