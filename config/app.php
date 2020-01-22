@@ -165,7 +165,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Jenky\Hermes\HermesServiceProvider::class,
 
         /*
          * Application Service Providers...
