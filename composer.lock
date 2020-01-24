@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ac565014a7b958a4e0fae29d06e8c9e",
+    "content-hash": "8fd4e688a7091a0858a88852ccccf0bc",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -617,7 +617,7 @@
             "dist": {
                 "type": "path",
                 "url": "../packages/hermes",
-                "reference": "c6a0bc4ecc448e110b1094f7f4db761e56b50027"
+                "reference": "af332082764d177c448884bc528c8763058a36ef"
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.3",
@@ -649,7 +649,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Jenky\\Hermes\\": "src/"
+                    "Jenky\\Hermes\\": "src"
                 },
                 "files": [
                     "src/helpers.php"
@@ -4490,8 +4490,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "Utility class for timing",
@@ -5349,8 +5349,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
