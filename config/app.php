@@ -165,7 +165,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Jenky\Elastify\ElastifyServiceProvider::class,
 
         /*
          * Application Service Providers...
