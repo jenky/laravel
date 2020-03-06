@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    dd(\Composer\Semver\Semver::satisfies('1.1', '~1.0'));
     return view('welcome');
 });
