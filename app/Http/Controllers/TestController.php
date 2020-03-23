@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Brick\Math\RoundingMode;
 use Brick\Money\Money as 💸;
 use Illuminate\Http\Request;
 use Jenky\Cartolic\Contracts\Cart\Cart;
@@ -19,10 +20,11 @@ class TestController extends Controller
             ->withPrice(new Money(💸::ofMinor(999, 'USD')));
 
         $shipping = Fee::make('shipping', new Money(💸::ofMinor(199, 'USD')));
+        $discount = Fee::make('promo', $cart->subtotal()->dividedBy(2, RoundingMode::DOWN)->negated());
 
         // $cart->add($item);
 
-        $cart->fees()->add($shipping);
+        $cart->fees()->add($shipping)->add($discount);
 
         // dd($cart, $cart->fees(), $cart->items());
 
