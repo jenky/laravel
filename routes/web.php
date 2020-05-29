@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('search', function () {
-    dd(\App\UserIndex::queryString(request('q', '*'))
+    dd(\App\Elasticsearch\UserIndex::queryString(request('q', '*'))
         ->highlight(['name' => []])
         ->sum('id')
         ->average('id')

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Elasticsearch;
 
 use Jenky\Elastify\Index;
 
