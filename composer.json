@@ -12,6 +12,7 @@
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3",
+        "jenky/songbird": "@dev",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0"
     },
@@ -59,5 +60,11 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+    },
+    "repositories": [
+        {
+          "type": "path",
+          "url": "../packages/songbird"
+        }
+    ]
 }
