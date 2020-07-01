@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Jenky\Songbird\Component;
+use Jenky\Songbird\Contracts\Resolvable;
+use Jenky\Songbird\Fields\Button;
+use Jenky\Songbird\Fields\Checkbox;
+use Jenky\Songbird\Fields\Text;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +19,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return collect([
+        Component::make('img')->src('https://vueformulate.com/assets/img/logo.png'),
+        Text::make('E-mail Address', 'email')->placeholder('Please enter your email address'),
+        Checkbox::make('Accept TOS', 'terms'),
+        Button::make('Submit')->asSubmit(),
+    ])
+        ->when(function ($collection) {
+            return $collection->whereInstanceOf(Resolvable::class)->each->resolve([]);
+        })
+        ->map->toArray()->pluck('props')->all();
 });
