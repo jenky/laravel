@@ -38,3 +38,15 @@ Route::get('v2', function () {
         ],
     ];
 });
+
+Route::get('exception', function () {
+    throw new \Exception('Test exception');
+});
+
+Route::post('validation', function (Request $request) {
+    $request->validate([
+        'name' => 'required',
+    ]);
+
+    return [];
+});
