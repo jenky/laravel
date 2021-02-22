@@ -3,10 +3,13 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Jenky\Hades\Exception\HandlesExceptionResponse;
 use Throwable;
 
 class Handler extends ExceptionHandler
 {
+    use HandlesExceptionResponse;
+
     /**
      * A list of the exception types that are not reported.
      *
