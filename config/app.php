@@ -165,7 +165,6 @@ return [
         /*
          * Package Service Providers...
          */
-        \Jenky\Cartolic\CartolicApplicationServiceProvider::class,
 
         /*
          * Application Service Providers...
