@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Jenky\Captcha\Validation\Captcha;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::view('captcha', 'captcha')->name('captcha');
+
+Route::post('captcha', function (Request $request) {
+    $request->validate([
+        'h-captcha-response' => Captcha::required(),
+    ]);
+
+    return ['ok' => true];
 });
