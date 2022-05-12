@@ -13,7 +13,7 @@ return [
     'configs' => [
         'default' => [
             'entrypoints' => [
-                // 'ssr' => 'resources/scripts/ssr.ts',
+                'ssr' => 'resources/scripts/ssr.ts',
                 'paths' => [
                     // 'resources/scripts/main.ts',
                     'resources/js/app.js',
@@ -44,6 +44,7 @@ return [
     */
     'aliases' => [
         '@' => 'resources',
+        // 'ziggy' => 'vendor/tightenco/ziggy/dist/vue',
     ],
 
     /*
@@ -58,6 +59,7 @@ return [
     'commands' => [
         'artisan' => [
             'vite:tsconfig',
+            'ziggy:generate',
             // 'typescript:generate'
         ],
         'shell' => [
