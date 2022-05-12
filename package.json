@@ -2,7 +2,7 @@
     "scripts": {
         "dev": "php ./artisan vitamin:serve",
         "production": "vite build",
-        "prod": "yarn production",
+        "prod": "npm run production",
         "routes": "php ./artisan ziggy:generate resources/js/Scripts/Routing/Ziggy.js",
         "horizon": "php ./artisan horizon"
     },
