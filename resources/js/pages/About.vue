@@ -1,5 +1,6 @@
 <script setup>
-import { Head, Link } from '@inertiajs/inertia-vue3'
+import { Link } from '@inertiajs/inertia-vue3'
+import Head from '@/js/Components/Layout/Head.vue'
 </script>
 
 <template>
