@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('welcome', fn () => inertia('Welcome'));
 Route::get('hello', fn () => inertia('test::Hello'));
