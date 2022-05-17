@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Inertia::loadComponentsFrom(__DIR__.'/../../vendor/test', 'test');
-        Inertia::loadComponentsFrom(__DIR__.'/../../vue', 'test');
+        Inertia::loadViewsFrom(__DIR__.'/../../vendor/test', 'test');
+        Inertia::loadViewsFrom(__DIR__.'/../../vue', 'test');
     }
 }
