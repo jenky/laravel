@@ -58,9 +58,9 @@ return [
     */
     'commands' => [
         'artisan' => [
-            'vite:tsconfig',
-            'ziggy:generate',
+            // 'vite:tsconfig',
             // 'typescript:generate'
+            'ziggy:generate',
         ],
         'shell' => [
             //
