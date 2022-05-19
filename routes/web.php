@@ -18,4 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('welcome', fn () => inertia('Welcome'));
-Route::get('hello', fn () => inertia('test::Hello'));
+Route::get('hello', fn () => inertia('test::Hello', [
+    'name' => 'Patrick',
+]));
