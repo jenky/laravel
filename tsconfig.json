@@ -19,9 +19,6 @@
         "paths": {
             "@/*": [
                 "resources/*"
-            ],
-            "ziggy/*": [
-                "vendor/tightenco/ziggy/dist/*"
             ]
         }
     },

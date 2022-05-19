@@ -58,7 +58,7 @@ return [
     */
     'commands' => [
         'artisan' => [
-            // 'vite:tsconfig',
+            'vite:tsconfig',
             // 'typescript:generate'
             'ziggy:generate',
         ],
