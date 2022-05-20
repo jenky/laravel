@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'Welcome')->name('index');
 Route::inertia('about', 'About')->name('about');
+Route::post('contact', function (Request $request) {
+    $request->validate([
+        'name' => ['required', 'min:2'],
+        'email' => ['required', 'email'],
+        'message' => ['required', 'min:5'],
+    ]);
+
+    return redirect(route('index'));
+})->name('contact');

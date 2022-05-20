@@ -1,8 +1,5 @@
-<script setup>
-</script>
-
 <template>
-<div class="text-center mx-auto">
+<div class="container mx-auto">
   <slot />
 </div>
 </template>
