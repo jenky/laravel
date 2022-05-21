@@ -5,7 +5,7 @@
         "dev:ssr": "node public/build/ssr.js",
         "build": "vite build",
         "build:ssr": "vite build --ssr",
-        "prod": "npm run build",
+        "prod": "vite build && vite build --ssr --emptyOutDir=false && npm run dev:ssr",
         "ssr": "npm run build:ssr && npm run dev:ssr"
     },
     "devDependencies": {
