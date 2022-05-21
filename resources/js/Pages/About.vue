@@ -21,7 +21,7 @@ function submit() {
 <template>
   <Head title="About" />
   <div class="flex flex-col justify-center items-center">
-    <h1 class="my-10 font-bold">This is about page</h1>
+    <h1 class="my-10 font-bold text-3xl">This is about page</h1>
 
     <form @submit.prevent="submit">
       <div class="form-control my-5 w-full max-w-xs">
