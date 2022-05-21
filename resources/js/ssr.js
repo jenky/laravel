@@ -4,6 +4,7 @@ import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import createServer from '@inertiajs/server'
 import { ZiggyVue } from '@/../vendor/tightenco/ziggy/src/js/vue'
 import { Ziggy } from './ziggy'
+import { Head, Link } from '@inertiajs/inertia-vue3'
 import Layout from './Components/Layout/Layout.vue'
 
 createServer((page) => createInertiaApp({
@@ -24,5 +25,7 @@ createServer((page) => createInertiaApp({
       render: () => h(app, props),
     }).use(plugin)
       .use(ZiggyVue, Ziggy)
+      .component('Head', Head)
+      .component('Link', Link)
   },
 }))
