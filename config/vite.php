@@ -13,7 +13,7 @@ return [
     'configs' => [
         'default' => [
             'entrypoints' => [
-                'ssr' => 'resources/scripts/ssr.ts',
+                'ssr' => 'resources/js/ssr.js',
                 'paths' => [
                     'resources/css/app.css',
                     'resources/js/app.js',
