@@ -21,28 +21,35 @@ function submit() {
 <template>
   <Head title="About" />
   <div class="flex flex-col justify-center items-center">
-    <h1>This is about page</h1>
+    <h1 class="my-10 font-bold">This is about page</h1>
 
     <form @submit.prevent="submit">
-      <div>
-        <label>Email</label>
-        <input type="email" class="form-input block" v-model="form.email">
+      <div class="form-control my-5 w-full max-w-xs">
+        <label class="label">
+          <span class="label-text">Email</span>
+        </label>
+        <input type="email" class="input input-bordered input-primary my-2 w-full max-w-xs" v-model="form.email">
         <div v-if="form.errors.email" class="text-red-500">{{ form.errors.email }}</div>
       </div>
-      <div>
-        <label>Name</label>
-        <input type="text" class="form-input block" v-model="form.name">
+      <div class="form-control my-5 w-full max-w-xs">
+        <label>
+          <span class="font-label">Name</span>
+        </label>
+        <input type="text" class="input input-bordered input-primary my-2 w-full max-w-xs" v-model="form.name">
         <div v-if="form.errors.name" class="text-red-500">{{ form.errors.name }}</div>
       </div>
-      <div>
-        <label>Message</label>
-        <input type="text" class="form-input block" v-model="form.message">
+      <div class="form-control my-5 w-full max-w-xs">
+        <label>
+          <span class="form-label">Message</span>
+        </label>
+        <input type="text" class="input input-bordered input-primary my-2 w-full max-w-xs" v-model="form.message">
         <div v-if="form.errors.message" class="text-red-500">{{ form.errors.message }}</div>
       </div>
       <!-- submit -->
-      <button type="submit" class="btn btn-primary" :disabled="form.processing">Login</button>
+      <div class="text-center">
+        <button type="submit" :class="['btn btn-primary mx-2 normal-case', { loading: form.processing }]" :disabled="form.processing">Submit</button>
+        <Link href="/" class="btn btn-ghost mx-2">Home page</Link>
+      </div>
     </form>
   </div>
-
-  <Link href="/" class="link">Home page</Link>
 </template>
