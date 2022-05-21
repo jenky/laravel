@@ -46,9 +46,9 @@ function submit() {
         <div v-if="form.errors.message" class="text-red-500">{{ form.errors.message }}</div>
       </div>
       <!-- submit -->
-      <div class="text-center">
-        <button type="submit" :class="['btn btn-primary mx-2 normal-case', { loading: form.processing }]" :disabled="form.processing">Submit</button>
-        <Link href="/" class="btn btn-ghost mx-2">Home page</Link>
+      <div class="text-center space-x-2">
+        <button type="submit" :class="['btn btn-primary normal-case', { loading: form.processing }]" :disabled="form.processing">Submit</button>
+        <Link href="/" class="btn btn-ghost normal-case">Home page</Link>
       </div>
     </form>
   </div>
