@@ -13,6 +13,7 @@ export default defineConfig({
         {
           '@inertiajs/inertia-vue3': [
             'useForm',
+            'usePage',
           ],
         },
       ],
