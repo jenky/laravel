@@ -12,7 +12,7 @@ createServer((page) => createInertiaApp({
   render: renderToString,
   resolve: (name) => {
     const pages = import.meta.glob('./Pages/**/*.vue')
-    // return (await pages[`./Pages/${name}.vue`]())
+    // return pages[`./Pages/${name}.vue`]()
 
     // Default layout setup
     const page = pages[`./Pages/${name}.vue`]()
