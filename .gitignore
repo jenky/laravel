@@ -2,6 +2,7 @@
 /public/build
 /public/hot
 /public/storage
+/resources/js/ziggy.js
 /storage/*.key
 /vendor
 .env
