@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
+use Jenky\Transmit\Contracts\HttpClient;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use Jenky\Hermes\JsonResponse;
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function () {
-    // dd(guzzle()->get('https://example.com'));
+Route::get('test', function (HttpClient $client) {
     // return guzzle()->get('https://jsonplaceholder.typicode.com/users/1', [
-    $response = guzzle()->get('https://httpbin.org/json');
+    $response = $client->get('https://httpbin.org/headers');
 
-    dd($response);
+    // dd($response);
+    return $response->json();
 });
