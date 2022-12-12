@@ -6,7 +6,9 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "enqueue/amqp-lib": "^0.10.9",
         "guzzlehttp/guzzle": "^7.2",
+        "jenky/larabbit": "@dev",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7"
@@ -61,5 +63,11 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+          "type": "path",
+          "url": "../packages/larabbit"
+        }
+    ]
 }
